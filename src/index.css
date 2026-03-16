@@ -43,6 +43,11 @@ body {
 }
 
 @media (max-width: 767px) {
+  .gallery-track {
+    -webkit-animation-duration: 25s;
+    animation-duration: 25s;
+  }
+
   .rsvp-section { height: auto !important; }
   .rsvp-card    { height: auto !important; }
 
