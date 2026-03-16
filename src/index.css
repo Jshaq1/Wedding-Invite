@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Clearface';
+  src: url('../Clearface-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.spin-slow {
+  animation: spin-slow 12s linear infinite;
+}
+
+@keyframes scroll-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.gallery-track {
+  animation: scroll-left 60s linear infinite;
+  width: max-content;
+}
+
+@media (max-width: 767px) {
+  .rsvp-section { height: auto !important; }
+  .rsvp-card    { height: auto !important; }
+
+  .faq-grid {
+    grid-template-columns: 1fr !important;
+    grid-template-areas: unset !important;
+    grid-template-rows: auto !important;
+  }
+  .faq-grid > * {
+    grid-area: unset !important;
+    padding: 28px !important;
+  }
+  .faq-grid h3 {
+    font-size: 26px !important;
+    margin-bottom: 14px !important;
+  }
+  .faq-grid p {
+    font-size: 15px !important;
+  }
+
+  .location-badge {
+    left: auto !important;
+    right: 8px !important;
+    top: 8px !important;
+    transform: none !important;
+  }
+
+  .schedule-line      { left: 55px !important; }
+  .schedule-fill-line { left: 53px !important; }
+  .schedule-end-cap   { left: 55px !important; }
+  .schedule-badge     { left: 55px !important; }
+  .schedule-content   { padding-left: 120px !important; }
+
+  .hero-image {
+    width: 100% !important;
+    height: 100% !important;
+    transform: none !important;
+    top: 0 !important;
+    left: 0 !important;
+  }
+  .hero-title {
+    font-size: 21cqi !important;
+  }
+}
