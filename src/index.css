@@ -44,8 +44,8 @@ body {
 
 @media (max-width: 767px) {
   .gallery-track {
-    -webkit-animation-duration: 45s;
-    animation-duration: 45s;
+    -webkit-animation-duration: 55s;
+    animation-duration: 55s;
   }
 
   .rsvp-section { height: auto !important; }
