@@ -85,6 +85,7 @@ export default function RSVPSection() {
 
   const attending = watch("attending");
   const [submitted, setSubmitted] = useState(false);
+  const [attendingResponse, setAttendingResponse] = useState<"yes" | "no" | "">();
   const [sending, setSending] = useState(false);
   const [sendError, setSendError] = useState(false);
 
@@ -108,6 +109,7 @@ export default function RSVPSection() {
         },
         EMAILJS_PUBLIC_KEY,
       );
+      setAttendingResponse(data.attending);
       setSubmitted(true);
     } catch (err) {
       console.error("EmailJS error:", err);
@@ -137,7 +139,7 @@ export default function RSVPSection() {
             className="text-4xl leading-tight"
             style={{ fontFamily: "Clearface, serif", color: DARK }}
           >
-            Thanks, we'll see you there!
+            {attendingResponse === "no" ? "Rude but fair enough." : "Thanks, we'll see you there!"}
           </h2>
         </div>
       </section>
