@@ -5,7 +5,6 @@ function RotatingBadge() {
   const radius = 44;
   const cx = 60;
   const cy = 60;
-  const circumference = 2 * Math.PI * radius;
   const pathId = "badge-circle";
 
   return (
