@@ -1,7 +1,7 @@
 import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import { useFieldArray, useForm } from "react-hook-form";
-import rsvpImage from "../assets/gallery/Love.jpg";
+import rsvpImage from "../assets/gallery/Love.JPG";
 
 // ─── EmailJS credentials ──────────────────────────────────────────────────────
 // 1. Sign up at https://www.emailjs.com (free)
