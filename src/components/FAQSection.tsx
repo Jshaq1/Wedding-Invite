@@ -89,6 +89,7 @@ function FAQCard({
 export default function FAQSection() {
   return (
     <section
+      id="faq"
       className="relative z-10 px-4 py-6 md:px-10"
       style={{ backgroundColor: "#eee9df" }}
     >

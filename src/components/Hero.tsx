@@ -1,8 +1,23 @@
+import { motion } from "framer-motion";
 import heroImage from "../assets/IMG_6313.JPG";
+
+const fadeUp = {
+  initial: { opacity: 0, y: 14 },
+  animate: { opacity: 1, y: 0 },
+};
 
 export default function Hero() {
   return (
     <section className="sticky top-0 h-[85vh] md:h-screen overflow-hidden">
+      {/* Cream wipe overlay — slides down to reveal hero */}
+      <motion.div
+        className="absolute inset-0 z-30"
+        style={{ backgroundColor: "#eee9df" }}
+        initial={{ y: 0 }}
+        animate={{ y: "100%" }}
+        transition={{ duration: 0.9, ease: [0.76, 0, 0.24, 1], delay: 0.1 }}
+      />
+
       {/* Background image — portrait rotated to landscape */}
       <img
         src={heroImage}
@@ -53,8 +68,14 @@ export default function Hero() {
 
       {/* Bottom content */}
       <div className="absolute bottom-0 left-0 right-0 px-4 md:px-10 pb-6 z-20">
-        {/* Desktop: subtitle sits above h1 via negative margin */}
-        <div className="hidden md:flex justify-between items-end -mb-6 px-4">
+        {/* Desktop: subtitle sits above h1 */}
+        <motion.div
+          className="hidden md:flex justify-between items-end -mb-6 px-4"
+          variants={fadeUp}
+          initial="initial"
+          animate="animate"
+          transition={{ duration: 0.7, ease: "easeOut", delay: 0.85 }}
+        >
           <span
             className="text-md tracking-wide"
             style={{ fontFamily: "sans-serif", color: "#faecda" }}
@@ -67,19 +88,31 @@ export default function Hero() {
           >
             Sunday, November 22, 2026
           </span>
-        </div>
-        <h1
+        </motion.div>
+
+        <motion.h1
           className="hero-title text-[#faecda] leading-none md:whitespace-nowrap"
           style={{
             fontFamily: "Clearface, serif",
             fontSize: "16.5cqi",
             lineHeight: 1,
           }}
+          variants={fadeUp}
+          initial="initial"
+          animate="animate"
+          transition={{ duration: 0.7, ease: "easeOut", delay: 0.6 }}
         >
           Meg &amp; Jordan
-        </h1>
+        </motion.h1>
+
         {/* Mobile: subtitle sits below h1 */}
-        <div className="flex flex-col gap-0.5 mt-2 md:hidden">
+        <motion.div
+          className="flex flex-col gap-0.5 mt-2 md:hidden"
+          variants={fadeUp}
+          initial="initial"
+          animate="animate"
+          transition={{ duration: 0.7, ease: "easeOut", delay: 0.85 }}
+        >
           <span
             className="text-base tracking-wide"
             style={{ fontFamily: "sans-serif", color: "#faecda" }}
@@ -92,7 +125,7 @@ export default function Hero() {
           >
             Sunday, November 22, 2026
           </span>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

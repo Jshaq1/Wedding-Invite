@@ -74,6 +74,7 @@ function RotatingBadge() {
 export default function LocationSection() {
   return (
     <section
+      id="location"
       className="relative z-10 px-4 pt-4 md:px-10 md:pt-10"
       style={{ backgroundColor: "#eee9df" }}
     >

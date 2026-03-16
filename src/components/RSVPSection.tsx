@@ -3,15 +3,9 @@ import { useState } from "react";
 import { useFieldArray, useForm } from "react-hook-form";
 import rsvpImage from "../assets/gallery/Love.JPG";
 
-// ─── EmailJS credentials ──────────────────────────────────────────────────────
-// 1. Sign up at https://www.emailjs.com (free)
-// 2. Add an Email Service (connect your Gmail) → copy the Service ID below
-// 3. Create an Email Template (see template variables used in onSubmit) → copy the Template ID
-// 4. Go to Account → API Keys → copy your Public Key
-const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID";
-const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID";
-const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
-// ─────────────────────────────────────────────────────────────────────────────
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 type Guest = {
   name: string;

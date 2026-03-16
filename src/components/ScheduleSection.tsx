@@ -150,6 +150,7 @@ export default function ScheduleSection() {
   return (
     <section
       ref={ref}
+      id="the-day"
       className="relative z-10 px-6 py-16 md:px-16 md:py-28"
       style={{ backgroundColor: "#eee9df" }}
     >
