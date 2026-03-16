@@ -26,12 +26,20 @@ body {
 }
 
 @keyframes scroll-left {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
+  from { -webkit-transform: translateX(0); transform: translateX(0); }
+  to { -webkit-transform: translateX(-50%); transform: translateX(-50%); }
 }
 .gallery-track {
+  -webkit-animation: scroll-left 60s linear infinite;
   animation: scroll-left 60s linear infinite;
   width: max-content;
+  will-change: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.gallery-track img {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
 }
 
 @media (max-width: 767px) {
