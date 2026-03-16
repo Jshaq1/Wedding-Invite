@@ -11,7 +11,7 @@ export default function Hero() {
   const [ready, setReady] = useState(false);
 
   return (
-    <section className="sticky top-0 h-[85vh] md:h-screen overflow-hidden">
+    <section className="sticky top-0 z-0 isolate h-[85vh] md:h-screen overflow-hidden">
       {/* Cream wipe overlay — slides down once image is loaded */}
       <motion.div
         className="absolute inset-0 z-30"

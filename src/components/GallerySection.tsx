@@ -22,7 +22,8 @@ export default function GallerySection() {
             key={i}
             src={src}
             alt=""
-            className="shrink-0 h-100 w-auto rounded-2xl object-cover"
+            className="shrink-0 rounded-2xl object-cover"
+            style={{ height: "400px", width: "auto" }}
           />
         ))}
       </div>

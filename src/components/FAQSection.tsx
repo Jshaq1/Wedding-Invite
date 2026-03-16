@@ -137,7 +137,7 @@ export default function FAQSection() {
         <FAQCard
           label="Food & Drinks"
           heading="Yes — we'll feed you"
-          body="Food and drinks will be provided throughout the day. We're serving pizza/pialla for dinner and there'll be plenty of beer and wine to go around. The venue is also BYO so if you're fussy bring all the spirits you like."
+          body="Food and drinks will be provided throughout the day. We're serving pizza/paella for dinner, dessert and there'll be plenty of beer and wine to go around. The venue is also BYO so if you're fussy bring all the spirits you like."
           size="medium"
           gridArea="food"
         />

@@ -12,21 +12,21 @@ import Dancing from "../assets/Dancing.mp4";
 
 const events = [
   {
-    time: "4:00pm",
+    time: "4:30pm",
     title: "Welcome Drinks",
     note: "Snake an ice cold bromin",
     image: MegDrink,
   },
-  { time: "4:30pm", title: "Ceremony", note: "Couple of beans", image: Love },
+  { time: "5:00pm", title: "Ceremony", note: "Couple of beans", image: Love },
   {
-    time: "5:30pm",
+    time: "6:30pm",
     title: "Dinner & Speeches",
-    note: "Pizza and Embarrassment",
+    note: "Pizza/Paella and Embarrassment",
     image: JordanSpeech,
   },
   {
-    time: "Late",
-    title: "Dancing",
+    time: "Till Late",
+    title: "Live Music & Dancing",
     note: "Till our socks got holes",
     image: Dancing,
   },
