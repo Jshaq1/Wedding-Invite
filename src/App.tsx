@@ -10,12 +10,14 @@ function App() {
   return (
     <div>
       <Hero />
-      <TextSection />
-      <ScheduleSection />
-      <LocationSection />
-      <FAQSection />
-      <GallerySection />
-      <RSVPSection />
+      <div style={{ position: "relative", zIndex: 1, transform: "translateZ(0)" }}>
+        <TextSection />
+        <ScheduleSection />
+        <LocationSection />
+        <FAQSection />
+        <GallerySection />
+        <RSVPSection />
+      </div>
     </div>
   );
 }
