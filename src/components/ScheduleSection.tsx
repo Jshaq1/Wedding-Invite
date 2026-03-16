@@ -167,7 +167,7 @@ export default function ScheduleSection() {
             className="text-2xl md:text-4xl leading-snug"
             style={{ fontFamily: "Clearface, serif", color: "#1a1a16" }}
           >
-            Join us for a day full of love, laughter, dancing, and a small
+            Join us for a evening full of love, laughter, dancing, and a small
             amount of autism. We can't wait to celebrate with you!
           </p>
         </div>
