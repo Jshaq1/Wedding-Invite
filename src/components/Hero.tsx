@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import heroImage from "../assets/IMG_6313.JPG";
 
@@ -7,14 +8,16 @@ const fadeUp = {
 };
 
 export default function Hero() {
+  const [ready, setReady] = useState(false);
+
   return (
     <section className="sticky top-0 h-[85vh] md:h-screen overflow-hidden">
-      {/* Cream wipe overlay — slides down to reveal hero */}
+      {/* Cream wipe overlay — slides down once image is loaded */}
       <motion.div
         className="absolute inset-0 z-30"
         style={{ backgroundColor: "#eee9df" }}
         initial={{ y: 0 }}
-        animate={{ y: "100%" }}
+        animate={{ y: ready ? "100%" : 0 }}
         transition={{ duration: 0.9, ease: [0.76, 0, 0.24, 1], delay: 0.1 }}
       />
 
@@ -24,6 +27,7 @@ export default function Hero() {
         alt=""
         aria-hidden="true"
         className="hero-image"
+        onLoad={() => setReady(true)}
         style={{
           position: "absolute",
           top: "50%",
@@ -73,7 +77,7 @@ export default function Hero() {
           className="hidden md:flex justify-between items-end -mb-6 px-4"
           variants={fadeUp}
           initial="initial"
-          animate="animate"
+          animate={ready ? "animate" : "initial"}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.85 }}
         >
           <span
@@ -99,7 +103,7 @@ export default function Hero() {
           }}
           variants={fadeUp}
           initial="initial"
-          animate="animate"
+          animate={ready ? "animate" : "initial"}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.6 }}
         >
           Meg &amp; Jordan
@@ -110,7 +114,7 @@ export default function Hero() {
           className="flex flex-col gap-0.5 mt-2 md:hidden"
           variants={fadeUp}
           initial="initial"
-          animate="animate"
+          animate={ready ? "animate" : "initial"}
           transition={{ duration: 0.7, ease: "easeOut", delay: 0.85 }}
         >
           <span
